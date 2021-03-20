@@ -1,0 +1,32 @@
+{
+    "name": "ivanov-a-v1004/ivanov-library",
+    "description": "ivanov",
+    "type": "library",
+	"license": "-",
+	"authors": [
+		{
+			"name": "ivanov alexander",
+			"email": "sawa.ivanov1004@mail.ru"
+		}
+	],
+	
+	"minimum-stability": "dev",
+	
+	"autoload":{
+		"psr-4":{
+			"Ivanov\\": "Ivanov"
+		}
+	},
+	
+    "require": {
+		 "rok9ru/trpo-core": "2.0"
+	},
+
+	"repositories": [
+		{	
+			"type": "git",
+			"url": "https://github.com/rok9ru/trpo-core"
+		}
+	]
+
+}
