@@ -12,7 +12,7 @@ class Square extends Line implements EquationInterface
 
     }
 
-    public function solve($a, $b, $c)
+    public function solve($a, $b, $c): array
     {
         if ($a === 0) {
             return parent::line($b, $c);

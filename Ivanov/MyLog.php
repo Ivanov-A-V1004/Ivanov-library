@@ -7,7 +7,7 @@ use core\LogAbstract;
 
 class MyLog extends LogAbstract implements LogInterface
 {
-    public static function log($str)
+    public static function log(string $str):void
     {
         self::Instance()->_log($str);
     }
@@ -17,7 +17,7 @@ class MyLog extends LogAbstract implements LogInterface
         $this->log[] = $str;
     }
 
-    public static function write()
+    public static function write():void
     {
         self::Instance()->_write();
     }
@@ -27,7 +27,7 @@ class MyLog extends LogAbstract implements LogInterface
 		$date = date('d-m-Y\_H.i.s.u');
         foreach ($this->log as $value){
             echo $value . "\r\n";
-			file_put_contents(__DIR__ . "\..\Log\\$date.log", trim($value."\r\n") . PHP_EOL, FILE_APPEND);
+			file_put_contents($_SERVER['DOCUMENT_ROOT'] . "log\\$date.log", trim($value."\r\n") . PHP_EOL, FILE_APPEND);
 		}
     }
 }
